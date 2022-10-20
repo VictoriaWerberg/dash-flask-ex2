@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="static/css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="logo"><img src = "static/assets/logo.png"></div>
+            <div class="nav-frame">
+                <div class="nav-up">
+                    <div class="item-active"><img src = "static/assets/icon1.png"/>
+                        <div class="nav-active-text">Overview</div>
+                    </div>
+                    {% for item in nav_up %}
+                    <div class="item"><img src = "static/assets/{{item.icon}}" />
+                        <div class ="nav-text"><a class ="link" href = "#">{{ item.name }}</a></div>
+                        {% if item["arr"] %} 
+                         <div class="icon-block"><img src = "static/assets/icon4.png"/></div>
+                        {% endif %}
+                        {% if item["number"] %}
+                        <div class="icon-block"><img src = "static/assets/icon3.png"/></div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}   
+                </div>
+                <div class="nav-down">
+                    {% for item in nav_down %}
+                    <div class="item"><img src = "static/assets/{{item.icon}}" />
+                        <div class ="nav-text"><a class ="link" href = "#">{{ item.name }}</a></div>
+                    </div>
+                    {% endfor %}                   
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="title">
+                <div class="title-block">
+                    <h1 class= "large-title">Welcome back, {{name}} </h1>
+                    <div class="text-block">Here is an information about all your orders</div>
+                </div>
+                <div class="user-block">
+                    <div class="link-block"><img src = "static/assets/icon11.png"/></div>
+                    <div class="link-block"><img src = "static/assets/icon12.png"/></div>
+                    <div class="link-block"><img src = "static/assets/icon13.png"/></div>
+                    <div class="user-name">{{name}}, {{surname}}</div>
+                    <div class="link-block"><img src = "static/assets/icon4.png"/></div>
+                </div>
+            </div>
+            <div class="cards">
+                {% for item in cards %}
+                <div class="card-block">                   
+                    <div class="data">
+                        <div class="data-block">
+                            <h1 class="large-numbers">{{ item.number }}</h1>
+                            <div class="text-block-2">{{item.subtitle}}</div>
+                        </div>
+                        <img src = "static/assets/{{item.icon}}"/>
+                    </div>
+                    <div class="sub-data"><img src="static/assets/carrg.png"/>
+                        <div class="text-block-3">{{item.diff}}</div>
+                        <div class="text-block-3">{{item.percent}} this week</div>
+                    </div>                   
+                </div>
+                {% endfor %}               
+            </div>
+            <div class="charts">
+                <div class="chart-block"><img src = "static/assets/chart.png" class = "img-responsive"/></div>
+                <div class="diagram-block"></div>
+                <div class="diagram-block"><img src="static/assets/diag.png"  class = "img-responsive"/></div>
+            </div>
+            <div class="table">
+                <div class="list-title">
+                    <h2 class="medium-title">Order List</h2>
+                    <img src="static/assets/list-el.png"/>
+                </div>
+                <div class = "tbl-rows">
+                    {% for item in lst %}
+                    <div class="col-names">                    
+                        <div class="unit">
+                            <div class="text-block-2">{{item.No}}</div>
+                        </div>
+                        <div class="unit">
+                            <div class="text-block-2">{{item.ID}}</div>
+                        </div>
+                        <div class="unit">
+                            <div class="text-block-2">{{item.Date}}</div>
+                        </div>
+                        <div class="unit">
+                            <div class="text-block-2">{{item.CustName}}</div>
+                        </div>
+                        <div class="unit">
+                            <div class="text-block-2">{{item.Location}}</div>
+                        </div>
+                        <div class="unit">
+                            <div class="text-block-2">{{item.Amount}}</div>
+                        </div>
+                        <div class="unit">
+                            <div class="text-block-2">{{item.StatusOrder}}</div>
+                        </div>
+                        <div class="unit">
+                            <div class="text-block-2">{{Action}}</div>
+                        </div>                    
+                    </div>
+                    {% endfor%}
+                </div>
+            </div>
+    </div>
+</body>
+</html>

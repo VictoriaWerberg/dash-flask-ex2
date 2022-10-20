@@ -1,0 +1,291 @@
+body {
+    font-family: 'Poppins';
+}
+
+
+.main{
+    display: flex;
+    padding: 55px;
+}
+
+
+.left{
+    width: 235px;
+}
+
+.right{
+    padding-left: 30px;
+}
+.logo{
+    margin-bottom: 70px;
+}
+.link-block{
+    margin-left: 25px;
+}
+
+
+.nav-text{
+    width: 120px;
+    padding-left: 15px;
+    font-size: 16;
+    color:#7c8db5
+}
+
+.nav-active-text{
+    padding-left: 15px;
+    color: #347ae2;
+}
+
+.nav-text-red{
+    width: 120px;
+    padding-left: 15px;
+    color: #921009;
+    font-size: 16px;
+}
+
+.title{
+    display: flex;
+    margin-bottom: 65px;
+    justify-content: space-between;
+}
+
+.user-block{
+    display: flex;
+    align-items: center;
+
+}
+
+.user-name{
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.large-title{
+    margin-right: 50px;
+    font-size: 30px;
+}
+
+.text-block{
+    color: #7c8db5;
+    font-size: 16px;
+}
+
+.card-block{
+    border-right: 1px solid #e6edff;
+    padding: 5px;
+
+}
+
+.card-block-last{
+    border-right: 0px solid #e6edff;
+    padding: 5px;
+
+}
+
+
+.data{
+    display:flex;
+    align-items: flex-start;
+}
+
+.data-block{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.sub-data{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.large-numbers{
+    font-size: 28px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.text-block-2{
+    margin-bottom: 5px;
+    color:#000
+    text-align: left;
+}
+
+.icon-block{
+    margin-right: 10px;
+    color: #7c8db5
+}
+.chart-block{
+    padding-right: 20px;
+    display: flex;
+}
+
+.medium-title{
+    font-size: 20px;
+}
+
+.list-title{
+    display: flex;
+    justify-content: space-between;  
+}
+
+
+.nav-up{
+    margin-bottom: 350px;
+}
+
+
+.item{
+    display: flex;
+    margin-bottom:25px;
+    align-items: center;
+}
+
+.link{
+text-decoration: none;
+color:#7c8db5
+
+}
+
+.item:link{
+    display: flex;
+    margin-bottom:25px;
+    align-items: center;
+    text-decoration: none;
+}
+.item-active{
+    display: flex;
+    margin-bottom:25px;
+    align-items: center;
+    border-right: 5px solid #347ae2;
+}
+
+
+.unit{
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 10px;
+}
+.cards{
+    display: flex;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e6edff;
+    border-radius:  10px;
+}
+
+
+.card-icon{
+    width: 25px;
+    height: 25px;
+    padding: 10px 10px 10px 10px;
+    border-radius:20%;
+    margin-left: 25px;
+    background-color: white;
+    box-shadow: 0px 0px 10px #ceddfc;
+    display: flex;
+}
+.charts{
+    display: flex; 
+}
+
+
+.table{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e6edff;
+    border-radius:  15px;
+}
+
+.tbl-rows{
+    flex-direction: column;
+}
+
+
+.col-names{
+    display: flex;
+    border-bottom: 1px solid #e6edff;
+    justify-content: space-around;
+}
+
+
+.icon-block{
+    justify-content: center;
+}
+
+
+
+.text-block-3{
+    color: #7c8db5;
+    font-size: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.nav-frame{
+    border-right: 1px solid #e6edff;
+}
+
+@media screen  and (max-width:1000px){
+
+.main{
+    padding: 5px;
+    flex-wrap: nowrap;
+ }
+ .right{
+    padding-left: 10px;
+ }
+
+ .title{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+    justify-content: space-between;
+ }
+
+ .cards{
+    display: flex;
+    direction: stretch;
+    justify-content:space-between;
+    padding-right: 5px;
+    padding-left: 5px;
+
+ }
+ .large-numbers{
+    font-size: 20px;
+ }
+
+ .left{
+    width: 150px;
+ }
+ .charts{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+ }
+ .chart-block{
+    width: auto;
+ }
+ .img-responsive{
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+ }
+ .diagram-block{
+    width: auto;
+ }
+ .large-title{
+    margin-right: 10px;
+ }
+}
+
